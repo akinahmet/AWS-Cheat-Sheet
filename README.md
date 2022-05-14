@@ -2,15 +2,16 @@
 
 ## Create Instance
 - Go to AWS console page
+- Click on **EC2**
 - Click on **Instances**
 - Click on **Launch Instance**
-- On `Step 1: Choose an Amazon Machine Image (AMI)`, click on **AWS Marketplace**
-- Search for **Deep Learning**
-- Choose **AWS Deep Learning AMI**
-- On `Step 2: Choose an Instance Type`, choose **p2.xlarge**
-- On `Step 6: Configure Security Group`, Add following inbound rules:
-    - Custom TCP	TCP	8888	0.0.0.0/0	| For jupyter notebook
-    - Custom TCP	TCP	8080	0.0.0.0/0 | For tensorboard
+- On `Name and Tags: Write a name (AMI)`, 
+- On `Application and OS Images (Amazon Machine Image): Choose an Amazon Machine Image (AMI)
+- On `Instance Type: Choose an Instance Type, (You can choose free tier)`
+- On `Key pair (login): You can create a new key pair (You must have a key pair in each region.)`
+- On `Network settings: Set the security groups`
+- On `Configure Storage, (8 GB is enough for now)`
+- Click on **Launch Instance**
 
 ## AWS Server
 ### Connect to your instance with SSH.
