@@ -7,7 +7,7 @@
 - Click on **EC2**
 - Click on **Instances**
 - Click on **Launch Instance**
-- On `Name and Tags: Write a name (AMI)`, 
+- On `Name and Tags: Write a name`, 
 - On `Application and OS Images (Amazon Machine Image): Choose an Amazon Machine Image (AMI)`
 - On `Instance Type: Choose an Instance Type, (You can choose free tier)`
 - On `Key pair (login): You can create a new key pair (You must have a key pair in each region.)`
