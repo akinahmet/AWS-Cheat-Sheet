@@ -14,6 +14,7 @@
 - On `Network settings: Set the security groups`
 - On `Configure Storage, (8 GB is enough for now)`
 - Click on **Launch Instance**
+- You created an instance 💪
 
 ## AWS Server
 ### Connect to your instance with SSH.
