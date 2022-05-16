@@ -21,3 +21,8 @@
 ```
 ssh -i <....pem> ubuntu@<Your Public DNS> (When you choose Ubuntu as AMI)
 ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI)
+
+## AWS IAM (Identity & Access Management)
+### What is IAM?
+AWS IAM stands for Identity & Access Management and is the primary service that handles authentication and authorization processes within AWS environments.
+
