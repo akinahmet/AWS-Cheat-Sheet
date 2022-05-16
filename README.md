@@ -47,6 +47,24 @@ Create IAM user with Administrator access for your daily work
 
 ### Creating IAM group
 
+- Log in as a IAM User (we already created IAM user above)
+- Go to AWS console page
+- Click on **IAM**
+- Click on **User groups**
+- Click on **Create group**
+- On `Name the group: Write a group name`
+Add users to the group - Optional (You can now add users to the group or later)
+- On Attach permissions policies - Optional (You can choose one or more policies, you can make it later)
+- Click on **Create Group** 
+- You successfully created a group
+- If we didn't add above, we can add users now
+- Click on **IAM**
+- Click on **User groups**
+- Click on the group name you created earlier
+- Click on **Add users**
+- Choose user(s)
+- Click on **Add users**
+
 
 
 
