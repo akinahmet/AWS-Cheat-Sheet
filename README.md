@@ -17,9 +17,28 @@
 - You created an instance 💪
 
 ## AWS Server
+There are several ways to connect AWS Server 
 ### Connect to your instance with SSH.
 ssh -i <....pem> ubuntu@<Your Public DNS> (When you choose Ubuntu as AMI)
+
 ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI)
+
+### Connect to your instance from your VS Code
+(We have already created an instance)
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Instances**
+- Select previously created instance
+- Click on **Connect**
+- Find 'Connect to your instance using its Public DNS'
+- Copy this link
+- Go to your VS Code
+- Open a Terminal in the directory
+- Open terminal in the directory where the your key is
+- Paste the link
+- Write 'yes'
+- And we connected from our computer to our EC2💪
+
 
 ## AWS IAM (Identity & Access Management)
 ### What is IAM?
