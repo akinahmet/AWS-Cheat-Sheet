@@ -16,6 +16,22 @@
 - Click on **Launch Instance**
 - You created an instance 💪
 
+### Use Cloudformation to create an EC2 instance
+- Go to AWS console page
+- Create a template on your local machine. Click [here](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplate.html) for more details of template creating.
+- At AWS Consol Click on **services** and search for Cloudformation.
+- You are at Cloudformation main dashboard 
+- Click on **Create Stack**
+- Select "Template is ready" (assuming we created a template above)
+- Select "Upload a template file" and upload your template
+(If you have already a template in AWS S3 you can choose Amazon S3 URL)
+- Click on **Next** and enter a Stack name
+- Choose the instance type, and existing key from your account.
+- Click on **Next**
+- Tags are optional, you may or may not add tags in this step
+- Now you don't need to set 'Configure stack options'
+- Review and click **Create Stack** 
+
 ## AWS Server
 There are several ways to connect AWS Server 
 ### Connect to your instance with SSH.
@@ -39,19 +55,7 @@ ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI
 - Write 'yes'
 - And we connected from our computer to our EC2💪
 
-### Use Cloudformation to create an EC2 instance
-- Go to AWS console page
-- Create a template on your local machine. Click [here](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplate.html) for more details of template creating.
-- At AWS Consol Click on **services** and search for Cloudformation.
-- You are at Cloudformation main dashboard 
-- Click on **Create Stack**
-- Select "Template is ready" (assuming we created a template above)
-- Select "Upload a template file" and upload your template
-(If you have already a template in AWS S3 you can choose Amazon S3 URL)
-- Click on **Next** and enter a Stack name
-- Click on **Next**
-- Now you don't need to set 'Configure stack options'
-- Review and click **Create Stack** 
+
 
 
 ## AWS IAM (Identity & Access Management)
