@@ -39,6 +39,20 @@ ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI
 - Write 'yes'
 - And we connected from our computer to our EC2💪
 
+### Use Cloudformation to create an EC2 instance
+- Go to AWS console page
+- Create a template on your local machine. Click [here](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplate.html) for more details of template creating.
+- At AWS Consol Click on **services** and search for Cloudformation.
+- You are at Cloudformation main dashboard 
+- Click on **Create Stack**
+- Select "Template is ready" (assuming we created a template above)
+- Select "Upload a template file" and upload your template
+(If you have already a template in AWS S3 you can choose Amazon S3 URL)
+- Click on **Next** and enter a Stack name
+- Click on **Next**
+- Now you don't need to set 'Configure stack options'
+- Review and click **Create Stack** 
+
 
 ## AWS IAM (Identity & Access Management)
 ### What is IAM?
