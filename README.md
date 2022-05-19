@@ -1,6 +1,6 @@
 # Amazon Web Services Cheat Sheet for beginners
 
-## Create Instance
+### Create Instance
 (A simple example for new learners. You can change and improve these settings as you learn.)
 
 - Go to AWS console page
@@ -32,12 +32,59 @@
 - Now you don't need to set 'Configure stack options'
 - Review and click **Create Stack** 
 
-## AWS Server
-There are several ways to connect AWS Server 
-### Connect to your instance with SSH.
-ssh -i <....pem> ubuntu@<Your Public DNS> (When you choose Ubuntu as AMI)
+### Extend Root Volume
+(We have already created an Amazon Linux 2 instance with default ebs volume and ssh)
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Instances**
+- Connect your Instance
+- List block devices (lsblk)
 
-ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI)
+```bash
+   lsblk
+```
+- Verify the file system in use for each volume
+
+```bash
+   df -h
+```
+
+- Check file system of the root volume's partition.
+
+```bash
+   sudo file -s /dev/xvda1
+```
+
+- Go to Volumes, select instance's root volume and modify it (increase capacity 8 GB >> 12 GB)
+
+```bash
+   sudo file -s /dev/xvda1
+```
+
+-  Extend partition 1 on the modified volume and occupy all newly avaiable space.
+
+```bash
+   sudo growpart /dev/xvda 1
+```
+
+- Resize the xfs file system on the extended partition to cover all available space.
+
+```bash
+   sudo xfs_growfs /dev/xvda1
+```
+
+- List block devices (lsblk) and file system disk space usage (df) of the instance again. Partition and file system should be extended.
+
+```bash
+   lsblk
+```
+```bash
+   df -h
+```
+
+
+
+## AWS Server
 
 ### Connect to your instance from your VS Code
 (We have already created an instance)
@@ -54,7 +101,6 @@ ssh -i <....pem> ec2-user@<Your Public DNS> (When you choose Amazon Linux as AMI
 - Paste the link
 - Write 'yes'
 - And we connected from our computer to our EC2💪
-
 
 
 
