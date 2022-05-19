@@ -1,5 +1,7 @@
 # Amazon Web Services Cheat Sheet for beginners
 
+## AWS EC2
+
 ### Create Instance
 (A simple example for new learners. You can change and improve these settings as you learn.)
 
@@ -32,7 +34,28 @@
 - Now you don't need to set 'Configure stack options'
 - Review and click **Create Stack** 
 
-### Extend Root Volume
+
+## AWS Server
+
+### Connect to your instance from your VS Code
+(We have already created an instance)
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Instances**
+- Select previously created instance
+- Click on **Connect**
+- Find 'Connect to your instance using its Public DNS'
+- Copy this link
+- Go to your VS Code
+- Open a Terminal in the directory
+- Open terminal in the directory where the your key is
+- Paste the link
+- Write 'yes'
+- And we connected from our computer to our EC2💪
+
+## AWS EC2 Volumes
+
+###  Extend Root Volume
 (We have already created an Amazon Linux 2 instance with default ebs volume and ssh)
 - Go to AWS console page
 - Click on **EC2**
@@ -81,27 +104,6 @@
 ```bash
    df -h
 ```
-
-
-
-## AWS Server
-
-### Connect to your instance from your VS Code
-(We have already created an instance)
-- Go to AWS console page
-- Click on **EC2**
-- Click on **Instances**
-- Select previously created instance
-- Click on **Connect**
-- Find 'Connect to your instance using its Public DNS'
-- Copy this link
-- Go to your VS Code
-- Open a Terminal in the directory
-- Open terminal in the directory where the your key is
-- Paste the link
-- Write 'yes'
-- And we connected from our computer to our EC2💪
-
 
 
 ## AWS IAM (Identity & Access Management)
