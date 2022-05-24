@@ -105,6 +105,42 @@
    df -h
 ```
 
+## Install Nginx Web Server on EC2 Linux 2
+
+(We have already created an Amazon Linux 2 instance)
+- Connect to your instance with SSH.
+```bash
+   ssh -i [Your Key pair] ec2-user@[Your EC2 IP / DNS name]
+```
+
+- Update the installed packages and package cache on your instance.
+```bash
+   sudo yum update -y
+```
+
+- Install the Nginx Web Server.
+```bash
+   sudo amazon-linux-extras install nginx1
+```
+
+- Install the Nginx Web Server.
+```bash
+   sudo amazon-linux-extras install nginx1
+```
+
+- Start the Nginx Web Server.
+```bash
+   sudo systemctl start nginx
+```
+
+- Check from browser with public IP/DNS
+
+
+
+
+
+
+
 
 ## AWS IAM (Identity & Access Management)
 ### What is IAM?
