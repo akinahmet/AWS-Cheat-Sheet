@@ -206,9 +206,54 @@ Resource type   : Instance
 
 - `Advance details` (Keep it as is)
 
--  Go to `Launch Template`
+-  Click on `Create Launch Template`
 
-### Creating Launch Templates
+- Select `MyFirstTemplate` ---> `Actions` ---> `Launch Instance from Template`
+
+-  Enter number of instance as `1`.
+
+- Keep the rest of settings as is and click the `Launch instance from template` at the bottom.
+
+- Go to EC2 Instance menu and show the created instance.
+
+### Launch Template Version 2
+
+- Go to `Launch Template` menu on the left hand pane
+
+- Select template named `MyFirstTemplate` ---> `Actions` ---> `Modify template (Create New Version)`
+
+- `Template version description`
+
+You can write version and description
+
+
+- `Key pair`
+
+Select your .pem file name
+
+
+- `Resource tags`
+
+
+Key             : Name
+Value           : Webserver-V2
+Resource type   : Instance
+
+
+- Go to `Advance Details` on the bottom and add the script given below into the `user data` field.
+
+
+#!/bin/bash
+
+yum update -y
+amazon-linux-extras install nginx1
+systemctl enable nginx
+systemctl start nginx
+
+
+- Go to `Launch Template` Menu and click on `MyFirstTemplate`.
+
+- You can see new version on the `Versions` tab.
 
 
 ## AWS IAM (Identity & Access Management)
