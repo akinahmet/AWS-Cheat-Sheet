@@ -136,10 +136,80 @@
 - Check from browser with public IP/DNS
 
 
+## Creating an Instance with Launch Template and Versioning
+
+### Creating Launch Templates
+
+1. Open the Amazon EC2 console
+```bash
+   https://console.aws.amazon.com/ec2/.
+```
+
+2. On the navigation pane, under `INSTANCES`, choose `Launch Templates`.
+
+3. Click on `Create launch template`.
+
+4. Enter a name and provide a description for the initial version of the launch template.
 
 
+Name                         : MyFirstTemplate
+Template version description : Origin
 
 
+5. Autoscaling Guidance (Keep it as default)
+
+
+6. Template Tags (Keep it as is)
+
+
+7. Source Template (Keep it as is)
+
+
+8. Amazon machine image (AMI)
+
+
+Choose Amazon Linux 2 AMI (HVM)
+
+9. Instance Type
+
+
+Choose t2.micro
+
+
+10. Key pair
+
+
+Please select your key pair (pem key) that is created before
+
+
+11. Security groups
+
+
+SSH 22, HTTP 80 ----> anywhere(0.0.0.0/0)
+
+
+12. Storage (volumes)
+
+
+we keep it as is  (Volume 1 (AMI Root) (8 GiB, EBS, General purpose SSD (gp2)))
+
+
+13. Resource tags
+
+
+Key             : Name
+Value           : Webserver-Origin
+Resource type   : Instance
+
+
+14. Network interfaces (Keep it as is)
+
+
+15. Advance details (Keep it as is)
+
+16.  Go to `Launch Template`
+
+### Creating Launch Templates
 
 
 ## AWS IAM (Identity & Access Management)
