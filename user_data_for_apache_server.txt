@@ -1,0 +1,12 @@
+User data with apache server
+
+#! /bin/bash
+#update os
+yum update -y
+#install apache server
+yum install -y httpd
+# start apache server
+systemctl start httpd
+systemctl enable httpd
+# with color
+echo 'export PS1="\[\e[1;34m\]\u\[\e[33m\]@\h# \W:\[\e[32m\]\\$\[\e[m\] "' >> /home/ec2-user/.bashrc
