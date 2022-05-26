@@ -18,6 +18,24 @@
 - Click on **Launch Instance**
 - You created an instance 💪
 
+### Create Instance with user data
+(Almost same as above)
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Instances**
+- Click on **Launch Instance**
+- On `Name and Tags: Write a name` 
+- On `Application and OS Images (Amazon Machine Image): Choose an Amazon Machine Image (AMI)`
+- On `Instance Type: Choose an Instance Type, (You can choose free tier)`
+- On `Key pair (login): You can create a new key pair (You must have a key pair in each region.)`
+- On `Network settings: Set the security groups`
+- On `Configure Storage, (8 GB is enough for now)`
+- Click on the `Advanced details` at the bottom,
+- Go to user data,
+- Open the file `user_data_for_apache_server.txt` in this repository and copy content,
+- Paste it in user data,
+- Click on **Launch Instance**
+
 ### Use Cloudformation to create an EC2 instance
 - Go to AWS console page
 - Create a template on your local machine. Click [here](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplate.html) for more details of template creating.
