@@ -62,12 +62,18 @@
 - Click on **Open ssh configuration file**
 - Edit config file
 
-    `TCPKeepAlive` yes
-    `ServerAliveInterval` 60
-    `Host` You can write your name
-    `HostName` Your puplic IP
-    `IdentityFile` Your pem file path
-    `User` ec2-user  for Amazon linux 
+   `TCPKeepAlive` yes
+
+   `ServerAliveInterval` 60
+
+   `Host` You can write your name
+
+   `HostName` Your puplic IP
+
+   `IdentityFile` Your pem file path
+
+   `User` ec2-user  for Amazon linux 
+
 - Save and close
 - Again Click on **Open a remote window**
 - Click on **connect to host**
