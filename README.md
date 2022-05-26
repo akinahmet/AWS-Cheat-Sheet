@@ -37,7 +37,7 @@
 
 ## AWS Server
 
-### Connect to your instance from your VS Code
+### Connect to your instance (method1)
 (We have already created an instance)
 - Go to AWS console page
 - Click on **EC2**
@@ -52,6 +52,27 @@
 - Paste the link
 - Write 'yes'
 - And we connected from our computer to our EC2💪
+
+### Connect to your instance (method2)
+
+(We have already created an instance)
+- Go to AWS console page and copy your puplic IP,
+- Open your VS Code,
+- Click on **Open a remote window** (bottom left),
+- Click on **Open ssh configuration file**
+- Edit config file
+
+    `TCPKeepAlive` yes
+    `ServerAliveInterval` 60
+    `Host` You can write your name
+    `HostName` Your puplic IP
+    `IdentityFile` Your pem file path
+    `User` ec2-user  for Amazon linux 
+- Save and close
+- Again Click on **Open a remote window**
+- Click on **connect to host**
+- And continue ...
+
 
 ## AWS EC2 Volumes
 
