@@ -116,7 +116,7 @@ Succes codes            : 200
 
 ```text
 Key                     : Name
-Value                   : MyTargetGroup
+Value                   : Please write value
 ```
 
 - Click on 'next'
