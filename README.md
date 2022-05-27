@@ -2,6 +2,30 @@
 
 ## AWS EC2
 
+### Create security group
+(We will use secutity group in the next steps.)
+
+- Open the Amazon **EC2** console.
+- Choose `Security Groups` on the left-hand menu,
+- Click the `Create Security Group` tab.
+- You will see this:
+
+```text
+Security Group Name  : Please write a name
+Description         : Please write a description
+VPC                 : `Default VPC`
+Inbound Rules:
+    - Type: SSH----> Source: Anywhere
+    - Type: HTTP ---> Source: Anywhere
+Outbound Rules: Keep it as it is
+Tag:
+    - Key   : Name
+    - Value : Please write value
+```
+
+- Click `Create Security Group` button.
+
+
 ### Create Instance
 (A simple example for new learners. You can change and improve these settings as you learn.)
 
