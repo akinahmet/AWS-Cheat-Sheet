@@ -76,6 +76,60 @@ Tag:
 - Now you don't need to set 'Configure stack options'
 - Review and click **Create Stack** 
 
+### Create a target group
+(Assume we create already two instances)
+
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Target Groups**
+- Click on **Create Target Group** 
+- Basic configuration.
+
+```text
+Choose a target type    : Instances
+Target Groups Name      : Please write a name
+Protocol                : HTTP
+Port                    : 80
+VPC                     : Default
+Protocol version        : HTTP1
+```
+
+- Health checks
+
+```text
+Health check protocol   : HTTP
+Health check path       : /
+```
+
+- Advance Health check settings.
+
+```text
+Port                    : Traffic port
+Healthy treshold        : 5
+Unhealthy treshold      : 2
+Timeout                 : 5 seconds
+Interval                : 10 seconds
+Succes codes            : 200
+```
+
+- Tags
+
+```text
+Key                     : Name
+Value                   : MyTargetGroup
+```
+
+- Click on 'next'
+- Select two instances that is created from Launch Template before and add to them to the target group.
+
+```text
+Ports for the selected instances : 80
+```
+- Click `Include as pending below` button.
+- Show that two instances are added to the target group.
+- Click `Create target group` button.
+
+
 
 ## AWS Server
 
