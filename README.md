@@ -56,9 +56,53 @@ Tag:
 - On `Configure Storage, (8 GB is enough for now)`
 - Click on the `Advanced details` at the bottom,
 - Go to user data,
-- Open the file `user_data_for_apache_server.txt` in this repository and copy content,
+- (With apache) Open the file `user_data_for_apache_server.txt` in this repository and copy content,
+or
+- (With nginx) Open the file `user_data_for_nginx.txt` in this repository and copy content,
 - Paste it in user data,
 - Click on **Launch Instance**
+
+### Connect to your instance (method1)
+(We have already created an instance)
+- Go to AWS console page
+- Click on **EC2**
+- Click on **Instances**
+- Select previously created instance
+- Click on **Connect**
+- Find 'Connect to your instance using its Public DNS'
+- Copy this link
+- Go to your VS Code
+- Open a Terminal in the directory
+- Open terminal in the directory where the your key is
+- Paste the link
+- Write 'yes'
+- And we connected from our computer to our EC2💪
+
+### Connect to your instance (method2)
+
+(We have already created an instance)
+- Go to AWS console page and copy your puplic IP,
+- Open your VS Code,
+- Click on **Open a remote window** (bottom left),
+- Click on **Open ssh configuration file**
+- Edit config file
+
+   `TCPKeepAlive` yes
+
+   `ServerAliveInterval` 60
+
+   `Host` You can write your name
+
+   `HostName` Your puplic IP
+
+   `IdentityFile` Your pem file path
+
+   `User` ec2-user  for Amazon linux 
+
+- Save and close
+- Again Click on **Open a remote window**
+- Click on **connect to host**
+- And continue ...
 
 ### Use Cloudformation to create an EC2 instance
 - Go to AWS console page
@@ -130,55 +174,7 @@ Ports for the selected instances : 80
 - Click `Create target group` button.
 
 
-
-## AWS Server
-
-### Connect to your instance (method1)
-(We have already created an instance)
-- Go to AWS console page
-- Click on **EC2**
-- Click on **Instances**
-- Select previously created instance
-- Click on **Connect**
-- Find 'Connect to your instance using its Public DNS'
-- Copy this link
-- Go to your VS Code
-- Open a Terminal in the directory
-- Open terminal in the directory where the your key is
-- Paste the link
-- Write 'yes'
-- And we connected from our computer to our EC2💪
-
-### Connect to your instance (method2)
-
-(We have already created an instance)
-- Go to AWS console page and copy your puplic IP,
-- Open your VS Code,
-- Click on **Open a remote window** (bottom left),
-- Click on **Open ssh configuration file**
-- Edit config file
-
-   `TCPKeepAlive` yes
-
-   `ServerAliveInterval` 60
-
-   `Host` You can write your name
-
-   `HostName` Your puplic IP
-
-   `IdentityFile` Your pem file path
-
-   `User` ec2-user  for Amazon linux 
-
-- Save and close
-- Again Click on **Open a remote window**
-- Click on **connect to host**
-- And continue ...
-
-
-## AWS EC2 Volumes
-
-###  Extend Root Volume
+###  EC2 Extend Root Volume
 (We have already created an Amazon Linux 2 instance with default ebs volume and ssh)
 - Go to AWS console page
 - Click on **EC2**
@@ -228,7 +224,7 @@ Ports for the selected instances : 80
    df -h
 ```
 
-## Install Nginx Web Server on EC2 Linux 2
+### Install Nginx Web Server on EC2 Linux 2
 
 (We have already created an Amazon Linux 2 instance)
 - Connect to your instance with SSH.
@@ -258,8 +254,6 @@ Ports for the selected instances : 80
 
 - Check from browser with public IP/DNS
 
-
-## Creating an Instance with Launch Template and Versioning
 
 ### Creating Launch Templates
 
@@ -339,7 +333,7 @@ Resource type   : Instance
 
 - Go to EC2 Instance menu and show the created instance.
 
-### Launch Template Version 2
+### Launch Template Versioning
 
 - Go to `Launch Template` menu on the left hand pane
 
@@ -380,6 +374,7 @@ systemctl start nginx
 
 
 ## AWS IAM (Identity & Access Management)
+
 ### What is IAM?
 AWS IAM stands for Identity & Access Management and is the primary service that handles authentication and authorization processes within AWS environments.
 
@@ -422,10 +417,6 @@ Add users to the group - Optional (You can now add users to the group or later)
 - Click on **Add users**
 - Choose user(s)
 - Click on **Add users**
-
-
-
-
 
 ```
 
