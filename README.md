@@ -1,6 +1,6 @@
 # Amazon Web Services Cheat Sheet for beginners
 
-## AWS EC2
+## AWS Elastic Compute Cloud (EC2)
 
 ### Create security group
 (We will use secutity group in the next steps.)
@@ -419,7 +419,20 @@ Add users to the group - Optional (You can now add users to the group or later)
 - Click on **Add users**
 
 ```
+## AWS Simple Storage Service (S3)
 
+### What is S3?
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. 
+
+### Creating a S3 bucket
+
+- Open S3 Service from AWS Management Console.
+- Click on **Create bucket**
+- Write a bucket name 
+   Bucket name must be unique and must not contain spaces or uppercase letters.
+- Select a region.
+- Object Ownership (ACLs enabled - Bucket owner preferred)
+-  
 
 
 
