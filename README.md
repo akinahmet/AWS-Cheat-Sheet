@@ -439,9 +439,35 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
 -  Click on **Create bucket**
 - We created a bucket 
 
-(If you want to create a a new Bucket for Static Website, also do the following steps)
+### Creating a new Bucket for Static Website
 
-- ...
+- Open S3 Service from AWS Management Console.
+- Click on **Create bucket**
+- Write a bucket name 
+   Bucket name must be unique and must not contain spaces or uppercase letters.
+- Select a region.
+- `Object Ownership` (ACLs disabled (recommended))
+- `Block all public access` Checked (KEEP BlOCKED)
+- `Versioning`(Enabled)
+- `Tagging` (0 Tags)
+- `Default encryption`(None)
+- `Object-level logging` (Disabled)
+-  Click on **Create bucket**
+- We created a bucket 
+- Click your S3 bucket and upload following files. 
+(You can find files in this repository)
+
+`index.html`
+`cat.jpg`
+
+- Click on your bucket name,
+- Click on **Properties*
+- Static website hosting click on `Edit`
+- Choose Enable
+- Index document = index.html
+- Change the bucket Public Access status from CHECKED(BLOCKED) to UNCHECKED(PUBLIC)
+- Set the static website bucket policy as Use the `aws-s3-static-website-policy.json` file (PERMISSIONS >> BUCKET POLICY) and change `bucket-name`  with your own bucket.
+- Open static website URL in browser and see its working.
 
 
 
