@@ -418,7 +418,6 @@ Add users to the group - Optional (You can now add users to the group or later)
 - Choose user(s)
 - Click on **Add users**
 
-```
 ## AWS Simple Storage Service (S3)
 
 ### What is S3?
@@ -431,8 +430,18 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
 - Write a bucket name 
    Bucket name must be unique and must not contain spaces or uppercase letters.
 - Select a region.
-- Object Ownership (ACLs enabled - Bucket owner preferred)
--  
+- `Object Ownership` (ACLs enabled - Bucket owner preferred)
+- `Block all public access` Checked (KEEP BlOCKED)
+- `Versioning`(Disabled)
+- `Tagging` (0 Tags)
+- `Default encryption`(None)
+- `Object-level logging` (Disabled)
+-  Click on **Create bucket**
+- We created a bucket 
+
+(If you want to create a a new Bucket for Static Website, also do the following steps)
+
+- ...
 
 
 
