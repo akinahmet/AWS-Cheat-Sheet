@@ -472,8 +472,9 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
 ### Creating an Image from the Snapshot of the Nginx Server and Launching a new Instance
 
 - Launch an instance with following configurations.
-   Security Group: Allow SSH and HTTP ports from anywhere
-   User data (paste user data seen below for Nginx)
+
+   **Security Group: Allow SSH and HTTP ports from anywhere**
+   **User data (paste user data seen below for Nginx)**
 
 ```text
   #!/bin/bash
@@ -489,5 +490,34 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
   systemctl enable nginx
   ```
 
+**Tag: Since "Data Lifecycle Manager" work based on tags, we use tag to customize Instance!**
+
+```text
+  Key: Name 
+  Value: SampleInstance  
+  ```
+- First copy the Instance ID and then go to EC2 dashboard and click "Snapshot" section. 
+- Click `create snapshot` button.
+
+Select resource type : Instance
+Instance ID          : Select the instance ID of Nginx
+Name(manually)       : Instance-Snapshot_First
+
+- Click create snapshot.
+
+- Click snapshot `Action` menu and select `create image`
+- Write please Name and Description
+
+```text
+Name        : MyfirstAMI_1
+Description : MyfirstAMI_1
+```
+
+- Click the `launch instance` tab.
+- Click `myAMI` from left-hand menu.
+- Select `MyfirstAMI_1' AS AMI
+- Launch instance named "Instance_1_from_Sample_Instance"
+- Copy the public IP of the newly created instance and paste it to the browser.
+- Show that the Nginx Web Server is working.
 
 
