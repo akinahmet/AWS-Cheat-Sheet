@@ -469,5 +469,25 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
 - Set the static website bucket policy as Use the `aws-s3-static-website-policy.json` file (PERMISSIONS >> BUCKET POLICY) and change `bucket-name`  with your own bucket.
 - Open static website URL in browser and see its working.
 
+### Creating an Image from the Snapshot of the Nginx Server and Launching a new Instance
+
+- Launch an instance with following configurations.
+   Security Group: Allow SSH and HTTP ports from anywhere
+   User data (paste user data seen below for Nginx)
+
+```text
+  #!/bin/bash
+  yum update -y
+  amazon-linux-extras install nginx1.12
+  yum install wget -y
+  cd /usr/share/nginx/html
+  chmod o+w /usr/share/nginx/html
+  rm index.html
+  wget https://raw.githubusercontent.com/awsdevopsteam/route-53/master/index.html
+  wget https://raw.githubusercontent.com/awsdevopsteam/route-53/master/ken.jpg
+  systemctl start nginx
+  systemctl enable nginx
+  ```
+
 
 
