@@ -515,7 +515,7 @@ Description : MyfirstAMI_1
 
 - Click the `launch instance` tab.
 - Click `myAMI` from left-hand menu.
-- Select `MyfirstAMI_1' AS AMI
+- Select `MyfirstAMI_1' as AMI
 - Launch instance named "Instance_1_from_Sample_Instance"
 - Copy the public IP of the newly created instance and paste it to the browser.
 - Show that the Nginx Web Server is working.
